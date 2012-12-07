@@ -1,0 +1,14 @@
+class Exura < ActiveRecord::Base
+  attr_accessible :description, :email, :name, :phone
+	validates :name, 
+            :presence => true, 
+            :uniqueness => true, 
+	    :format => { :with => /^([(a-z)|(A-Z)\ \-]{3,10})$/i }  	 
+	    validates :email,
+            :presence => true, 
+            :uniqueness => true, 
+            :format => { :with => /^([^@\s]+)@((?:[gmail|yahoo|exura]+\.)+[com|in]{2,})$/i }			
+            validates :phone,:presence => true,
+            :numericality => true,
+            :length => { :minimum => 10, :maximum => 11 }
+end

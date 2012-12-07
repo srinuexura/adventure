@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @exura.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @exura.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @exura.phone %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @exura.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_exura_path(@exura) %> |
+<%= link_to 'Back', exuras_path %>
