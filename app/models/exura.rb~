@@ -10,5 +10,5 @@ class Exura < ActiveRecord::Base
             :format => { :with => /^([^@\s]+)@((?:[gmail|yahoo|exura]+\.)+[com|in]{2,})$/i }			
             validates :phone,:presence => true,
             :numericality => true,
-            :length => { :minimum => 10, :maximum => 11 }
+            :length => { :minimum => 10, :maximum => 11, :message => "please enter numbers only" }
 end
